@@ -1,0 +1,69 @@
+<% include partials/header %>
+
+<div class="container-productos">
+    <% for(var i = 0; i < productos.length; i++){ %>
+        <div class="productos">
+            <img src="<%= productos[i].cover %>" alt="">
+            <br><br>
+            <h1><%= productos[i].nombre %></h1><br>
+            <h3>#<%= productos[i].categoria %></h3><br>
+            <p>Precio: <%= productos[i].precio %>$</p>
+        </div>
+    <% } %>
+</div>
+
+<div class="filas">
+    <% if(pages){%>
+    <nav>
+        <ul>
+            <!-- [ Programar el boton de primero ] -->
+            <% if(current == 1){ %>
+                <li class="desactivado">
+                    <a href="#">Primero</a>
+                </li>
+            <% } else{ %>          
+                <li class="act-primero">
+                    <a href="/productos/1">Primero</a>
+                </li>
+            <% } %>  
+            <!-- [ Paginas ] -->
+            <% var i = (Number(current)) > 5 ? (Number(current)) - 4 : 1 %>
+            <% if(i !== 1){ %>
+                <li>
+                    <a href="#">...</a>
+                </li>
+            <% } %>   
+
+            <% for(;i <= (Number(current) + 4) && pages; i++) { %>
+                <% if(i == current) { %>
+                    <li class="uso">
+                        <a href="<%= i %>"><%= i %></a>
+                    </li>
+                <% } else { %>
+                    <li>
+                        <a href="/productos/<%= i %>"><%= i %></a>
+                    </li>
+                <% } %>    
+            <% } %>    
+
+            <% if(i == Number(current) + 4 && i < pages){ %>
+                <li>
+                    <a href="#">...</a>
+                </li>
+            <% } %>    
+            <!-- [ Programar ultima pagina ] -->
+            <% if(current == pages){ %>
+                <li class="desactivado">
+                    <a href="#">Ultimo</a>
+                </li>
+            <% } else{ %>
+                <li class="act-primero">
+                    <a href="/productos/<%= pages %>">Ultimo</a>
+                </li>
+            <% } %>    
+        </ul>
+    </nav>  
+    <% } %>
+</div>
+
+<% include partials/footer %>

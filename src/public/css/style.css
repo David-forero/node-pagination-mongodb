@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{text-decoration: none;}
+
+body{
+    background: #ddd;
+    font-family: sans-serif;
+}
+
+header{
+    width: 100%;
+    padding: 10px 20px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a h2{
+    color: grey;
+    font-weight: 300;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 5px;
+}
+
+nav ul li a{
+    color: #0066ff;
+    font-size: 19px;
+    font-weight: 300;
+}
+
+/*---------- [ Agregar ] ----------*/
+
+.form-container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    width: 400px;
+    background: #fff;
+    box-shadow: 0 0 3px grey;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+form div{
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color: #d8d8d8;
+    background: #3f51b5;
+}
+
+form section{
+    width: 100%;
+    padding: 10px;
+}
+
+form section input{
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 3px;
+    border: 1px solid grey; 
+}
+
+form button{
+    width: 70%;
+    border: none;
+    padding: 10px 20px;
+    background: #0066ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*---------- [ productos ] ----------*/
+
+.container-productos{
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productos{
+    width: 300px;
+    background: #fff;
+    box-shadow: 0 0 3px grey;
+    margin: 15px;
+    padding: 10px;
+    color: #2d2d2d;
+}
+
+.productos h1, .productos h2, h3{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.filas{
+    text-align: center;
+}
+
+.desactivado a{color: grey;}
+.uso a{color: grey;}
