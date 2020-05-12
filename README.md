@@ -1,4 +1,5 @@
 # node-pagination-mongodb
+A pagination only with node and mongodb using lib faker
 
 # Screenshot
 
